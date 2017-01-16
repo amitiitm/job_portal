@@ -21,4 +21,5 @@ Rails.application.config.assets.precompile += %w( fontello.css )
 Rails.application.config.assets.precompile += %w( idangerous.swiper.css )
 Rails.application.config.assets.precompile += %w( style.css )
 Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
+Rails.application.config.assets.precompile += %w( home.css )
 

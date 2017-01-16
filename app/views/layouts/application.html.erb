@@ -1,45 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Ybt</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', 'bootstrap.min','fontello','idangerous.swiper','style',media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'map','SmoothScroll','jarallax','jquery.countTo','all','anchors.nav','data-turbolinks-track': 'reload' %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/2.7.6/idangerous.swiper.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-  </head>
-
-  <body>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no" /> 
-            <link rel="shortcut icon" href="favicon.ico"/>     
-      <title>Young Brains Technologies</title>
-  </head>
-<body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testing Application</title>
   
+  <!-- Main css styles -->
+  <%= stylesheet_link_tag    'application', 'data-turbolinks-track' => true %>
+
+  <!-- Main javascript files -->
+  <%= javascript_include_tag 'application', 'admin/clockpicker','admin/daterangepicker','admin/datepicker','data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag(source='favicon.ico') %>
+  <%= stylesheet_link_tag "home" %>
+
+</head>
+<body class="fixed-sidebar">
+
+<!-- Wrapper-->
+<div id="wrapper">
+
+  <!-- Navigation -->
+  <%= render 'layouts/navigation' %>
+
+  <!-- Page wraper -->
+  <div id="page-wrapper" class="gray-bg">
+
+    <!-- Page wrapper -->
+    <%#= render 'layouts/topnavbar' %>
+
+    <!-- Main view  -->
     <%= yield %>
 
+    <!-- Footer -->
+    <%= render 'layouts/footer' %>
 
-    <script>
-  function submitForm() {
-    $.ajax({type:'POST', url:'email-action.php', data:$('#contact-form').serialize(), success: function(response) {
-       $('.submit').html('send');
-       $('.success').addClass('active');
-       document.contactform.reset();                                 
-    }});                
-    return false;
-  } 
-</script>                                                       
- 
+  </div>
+  <!-- End page wrapper-->
+
+</div>
+<!-- End wrapper-->
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $('.clockpicker').clockpicker();
+        
+        $(".chosen-select").chosen();
+       
+        $('.date').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true,
+            format: 'dd-mm-yyyy'
+        });
+
+
+    });
+
+    function validateEmail(sEmail) {
+        var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+        if (filter.test(sEmail)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+</script>
+
 </body>
-</html> 
-  </body>
 </html>

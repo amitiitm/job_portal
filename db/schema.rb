@@ -12,11 +12,12 @@
 
 ActiveRecord::Schema.define(version: 20161012093509) do
 
-  create_table "projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string  "name"
-    t.string  "email"
-    t.integer "mobile"
-    t.integer "project_type"
+  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "number"
+    t.string  "description"
+    t.string  "status"
+    t.string  "category"
+    t.string  "sales_type"
   end
 
 end
