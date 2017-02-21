@@ -7,7 +7,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
-#gem 'pg'
+gem 'pg'
 gem 'mysql2', '~> 0.3.18'
 gem 'activerecord-import'
 # Use Puma as the app server
