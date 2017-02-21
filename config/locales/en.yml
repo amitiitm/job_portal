@@ -20,4 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  successfully_imported: "Products Imported Successfully."
+  invalid_file: "Please Select Valid CSV File."
+  csv_column_name: "Invalid Column Name, Valid Values are number,status,category,description,sales_type"

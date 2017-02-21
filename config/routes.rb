@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
-  resources :home do
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'login#access'
+  resources :login do
     collection do
-      post :upload
+      post 'access'
     end
   end
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

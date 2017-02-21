@@ -13,7 +13,7 @@ default: &default
 
 development:
   <<: *default
-  database: upw_test1
+  database: job_crm_tool
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

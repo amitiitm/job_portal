@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testing Application</title>
+  <title>Job CRM TOOL</title>
   
   <!-- Main css styles -->
   <%= stylesheet_link_tag    'application', 'data-turbolinks-track' => true %>
@@ -11,7 +11,7 @@
   <!-- Main javascript files -->
   <%= javascript_include_tag 'application', 'admin/clockpicker','admin/daterangepicker','admin/datepicker','data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= favicon_link_tag(source='favicon.ico') %>
+  <%#= favicon_link_tag(source='favicon.ico') %>
   <%= stylesheet_link_tag "home" %>
 
 </head>
@@ -22,7 +22,7 @@
 
   <!-- Navigation -->
   <%= render 'layouts/navigation' %>
-
+  <%= render 'layouts/left_navigation' if session[:email].present? %>
   <!-- Page wraper -->
   <div id="page-wrapper" class="gray-bg">
 

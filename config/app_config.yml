@@ -1,0 +1,17 @@
+development:
+  :product_name: "Job CRM"
+  :contact_email: "support@jobportal.com"
+  :title: "Job Portal an online job tracking application."
+
+test:
+  :product_name: "Job CRM"
+  :contact_email: "support@jobportal.com"
+  :title: "Job Portal an online job tracking application."
+staging:
+  :product_name: "Job CRM"
+  :contact_email: "support@jobportal.com"
+  :title: "Job Portal an online job tracking application."
+production:
+  :product_name: "Job CRM"
+  :contact_email: "support@jobportal.com"
+  :title: "Job Portal an online job tracking application."
