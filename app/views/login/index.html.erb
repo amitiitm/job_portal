@@ -1,4 +1,5 @@
 <div class="loginColumns animated fadeInDown" style="padding-top:9%;">
+  <%= render :partial => 'shared/notification' %>
   <div class="row">
     <%= render :partial => 'shared/login_left_panel' %>
 
@@ -6,18 +7,23 @@
       <div class="ibox-content">
         <div><h3>Job CRM Client Login</h3> </div>
         <div class="hr-line-dashed"></div>
-        <%= form_tag access_login_index_path do %>
+        <%= form_tag sign_in_login_index_path do %>
             <div class="form-group">
               <input type="email" class="form-control" placeholder="Email" required="true" name="email">
             </div>
             <div class="form-group">
               <input type="password" class="form-control" placeholder="Password" name="password" required="true">
             </div>
-            <button type="submit" class="btn btn-primary block full-width m-b">
+            <button type="submit" class="btn btn-success block full-width m-b">
               Login
             </button>
 
             <a href="#" onclick="alert('Under implementation!')"> <small>Forgot password?</small> </a>
+
+            <p class="text-muted text-center">
+              <small>Do not have an account?</small>
+            </p>
+            <a class="btn btn-sm btn-white btn-block" href="<%= new_login_path %>">SignUp Here</a>
 
             <p class="text-muted text-center"></p>
 
